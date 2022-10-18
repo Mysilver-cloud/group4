@@ -1,6 +1,5 @@
 #!/bin/bash
 
-sudo su 
 sudo apt-get update
 sudo apt-get install git
 
@@ -8,6 +7,8 @@ sudo apt-get install git
 git clone https://github.com/Mysilver-cloud/group4-2.git /home/ubuntu/group4-2
 
 cd ~/group4-2
+
+sudo su
 
 
 
