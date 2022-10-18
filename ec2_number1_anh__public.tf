@@ -6,6 +6,7 @@ resource "aws_instance" "my_public_server" {
   subnet_id              = aws_subnet.public_subnet.id
   vpc_security_group_ids = [aws_security_group.public_sg.id]
   key_name               = "aws-talent-academy-group4.pub"
+  user_data = "${file("${path.module}/user-data.sh")}"
 
   tags = {
       Name = "ec2_public"
