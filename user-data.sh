@@ -2,7 +2,8 @@
 
 sudo apt-get-update
 
-python - << EOF #!/usr/bin/env python 
+cat <<EOF >increment.py
+#!/usr/bin/env python 
 
 with open("test.txt", "r") as file:
     number = file.read()
@@ -14,7 +15,9 @@ with open("test.txt", "w") as file:
 
 EOF
 
-echo "0" > test.txt
+cat <<EOF >test.txt
+0
+EOF
 
 (crontab -e ; echo "* * * * * /usr/bin/python3 /home/ubuntu/increment.py") | crontab -
 
