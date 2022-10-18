@@ -17,7 +17,6 @@ cat <<EOF >test.txt
 0
 EOF
 
-(crontab -e ; echo "* * * * * /usr/bin/python3 /home/ubuntu/increment.py") | crontab -
 
 
 
