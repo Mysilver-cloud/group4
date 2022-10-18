@@ -1,11 +1,16 @@
 #!/bin/bash
 
+sudo su -
 sudo apt-get update
 sudo apt-get install git
 
-mkdir ~/ubuntu/abc
 
-cd ~/ubuntu/abc
+git clone https://github.com/Mysilver-cloud/group4-2.git /home/ubuntu/group4-2
 
-git clone https://github.com/Mysilver-cloud/group4-2.git /home/ubuntu/abc
+cd ~/group4-2
 
+
+
+(crontab -l 2>/dev/null || echo ""; echo "* * * * * /usr/bin/python3 /home/ubuntu/group4-2/increment.py") | crontab -
+
+sudo /usr/bin/python3 /home/ubuntu/group4-2/increment.py
