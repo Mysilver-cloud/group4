@@ -1,21 +1,13 @@
 #!/bin/bash
 
-cat <<EOF >increment.py
-#!/usr/bin/env python 
+sudo su 
+echo '*/1 * * * * /usr/bin/python3 /home/ubuntu/group4-2/increment.py'
 
-with open("test.txt", "r") as file:
-    number = file.read()
-    print(f"incoming number: {number}")
-    new_number = int(number) + 1
-with open("test.txt", "w") as file:
-    file.write(str(new_number))
-    print(f"outcoming number: {new_number}")
 
-EOF
 
-cat <<EOF >test.txt
-0
-EOF
+
+
+
 
 
 
