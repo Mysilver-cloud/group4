@@ -8,3 +8,4 @@ with open("/home/ubuntu/group4-2/test.txt", "w") as file:
     file.write(str(new_number))
     print(f"outcoming number: {new_number}")
 
+# group 4
