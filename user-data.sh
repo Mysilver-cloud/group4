@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo su -
+sudo su 
 sudo apt-get update
 sudo apt-get install git
 
