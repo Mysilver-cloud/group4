@@ -1,7 +1,5 @@
 #!/bin/bash
 
-sudo apt-get-update
-
 cat <<EOF >increment.py
 #!/usr/bin/env python 
 
@@ -20,4 +18,6 @@ cat <<EOF >test.txt
 EOF
 
 (crontab -e ; echo "* * * * * /usr/bin/python3 /home/ubuntu/increment.py") | crontab -
+
+
 
